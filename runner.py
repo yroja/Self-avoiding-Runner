@@ -57,14 +57,6 @@ class Grid:
     def getGrid(self):
         return self.grid
 
-    def check(self):
-        count = 0
-        for i in range(0, len(self.grid)):
-            for j in range(0, len(self.grid[i])):
-                count += 1
-
-        print(count)
-
 class Game:
     def __init__(self) -> None:
         self.grid = Grid().getGrid()
@@ -122,7 +114,6 @@ class Game:
 if __name__ == '__main__':
 
     screen.fill('black')
-    #initGrid()
     game = Game()
     game.run()
     while True:
