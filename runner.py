@@ -49,7 +49,6 @@ class Grid:
         for i in range(0, 20):
             self.grid.append([])
             for j in range(0,40):
-                #pygame.draw.circle(screen, (0,255,0), (x, y), 10, width=0)
                 self.grid[i].append(Cell(x, y))
                 x += 10 * 2 + 5
             x = 10
@@ -81,7 +80,7 @@ class Game:
             pygame.display.update()
             time.sleep(0.1)
 
-        print('GAME OVER')
+        print("GAME OVER\npress 'a' to start a new walk")
         
 
 
@@ -110,7 +109,7 @@ class Game:
             self.row = choice[0]
             self.column = choice[1]
         else:
-            print('Keine Möglichkeit mehr zum Bewegen')
+            print('no possible direction to move!')
             self.canMove = False
 
 
